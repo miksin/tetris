@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700">
+  <rect width="900" height="700" fill="#080808"/>
+  <text x="450" y="48" font-family="monospace" font-size="28" fill="#e0e0e0" text-anchor="middle">TETRIS — UI Layout</text>
+  <!-- Hold Panel -->
+  <rect x="30" y="70" width="150" height="160" fill="#111111" stroke="#555555" stroke-width="2"/>
+  <text x="105" y="100" font-family="monospace" font-size="16" fill="#aaaaaa" text-anchor="middle">HOLD</text>
+  <rect x="55" y="115" width="100" height="80" fill="#0d0d0d" stroke="#333333"/>
+  <text x="105" y="162" font-family="monospace" font-size="13" fill="#555555" text-anchor="middle">[piece]</text>
+  <!-- Game Board -->
+  <rect x="220" y="70" width="400" height="600" fill="#0a0a0a" stroke="#444444" stroke-width="3"/>
+  <text x="420" y="360" font-family="monospace" font-size="16" fill="#333333" text-anchor="middle">GAME BOARD (10 x 20 grid)</text>
+  <!-- Score Panel -->
+  <rect x="670" y="70" width="200" height="160" fill="#111111" stroke="#555555" stroke-width="2"/>
+  <text x="770" y="100" font-family="monospace" font-size="15" fill="#aaaaaa" text-anchor="middle">SCORE</text>
+  <text x="770" y="135" font-family="monospace" font-size="24" fill="#ffffff" text-anchor="middle">000000</text>
+  <text x="690" y="172" font-family="monospace" font-size="15" fill="#aaaaaa">LEVEL</text>
+  <text x="780" y="172" font-family="monospace" font-size="18" fill="#00d4ff">1</text>
+  <text x="690" y="205" font-family="monospace" font-size="15" fill="#aaaaaa">LINES</text>
+  <text x="780" y="205" font-family="monospace" font-size="18" fill="#00d4ff">0</text>
+  <!-- Next Panel -->
+  <rect x="670" y="260" width="200" height="320" fill="#111111" stroke="#555555" stroke-width="2"/>
+  <text x="770" y="290" font-family="monospace" font-size="15" fill="#aaaaaa" text-anchor="middle">NEXT</text>
+  <rect x="700" y="310" width="140" height="70" fill="#0d0d0d" stroke="#333333"/>
+  <text x="770" y="353" font-family="monospace" font-size="13" fill="#555555" text-anchor="middle">[piece 1]</text>
+  <rect x="700" y="395" width="140" height="60" fill="#0d0d0d" stroke="#333333"/>
+  <text x="770" y="430" font-family="monospace" font-size="13" fill="#555555" text-anchor="middle">[piece 2]</text>
+  <rect x="700" y="470" width="140" height="55" fill="#0d0d0d" stroke="#333333"/>
+  <text x="770" y="502" font-family="monospace" font-size="13" fill="#555555" text-anchor="middle">[piece 3]</text>
+  <!-- Idle overlay -->
+  <rect x="230" y="280" width="380" height="140" fill="#000000" stroke="#00d4ff" stroke-width="2" opacity="0.9"/>
+  <text x="420" y="328" font-family="monospace" font-size="34" fill="#00d4ff" text-anchor="middle">TETRIS</text>
+  <text x="420" y="372" font-family="monospace" font-size="16" fill="#aaaaaa" text-anchor="middle">Press SPACE to start</text>
+  <text x="420" y="407" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">(Idle overlay — disappears when game starts)</text>
+  <!-- Color Legend -->
+  <rect x="30" y="280" width="150" height="390" fill="#0d0d0d" stroke="#333333"/>
+  <text x="105" y="305" font-family="monospace" font-size="14" fill="#aaaaaa" text-anchor="middle">Color Palette</text>
+  <rect x="45" y="325" width="28" height="28" fill="#00d4ff" stroke="#00d4ff"/>
+  <text x="83" y="344" font-family="monospace" font-size="13" fill="#aaaaaa">I — Cyan</text>
+  <rect x="45" y="370" width="28" height="28" fill="#ffd700" stroke="#ffd700"/>
+  <text x="83" y="389" font-family="monospace" font-size="13" fill="#aaaaaa">O — Yellow</text>
+  <rect x="45" y="415" width="28" height="28" fill="#aa00ff" stroke="#aa00ff"/>
+  <text x="83" y="434" font-family="monospace" font-size="13" fill="#aaaaaa">T — Purple</text>
+  <rect x="45" y="460" width="28" height="28" fill="#00ff55" stroke="#00ff55"/>
+  <text x="83" y="479" font-family="monospace" font-size="13" fill="#aaaaaa">S — Green</text>
+  <rect x="45" y="505" width="28" height="28" fill="#ff3355" stroke="#ff3355"/>
+  <text x="83" y="524" font-family="monospace" font-size="13" fill="#aaaaaa">Z — Red</text>
+  <rect x="45" y="550" width="28" height="28" fill="#0044ff" stroke="#0044ff"/>
+  <text x="83" y="569" font-family="monospace" font-size="13" fill="#aaaaaa">J — Blue</text>
+  <rect x="45" y="595" width="28" height="28" fill="#ff8800" stroke="#ff8800"/>
+  <text x="83" y="614" font-family="monospace" font-size="13" fill="#aaaaaa">L — Orange</text>
+</svg>
