@@ -53,6 +53,18 @@ describe('layout', () => {
     expect(maxY).toBeLessThanOrEqual(BOARD_Y + 20 * CELL);
   });
 
+  it('ready state: shows PRESS ENTER TO START overlay', () => {
+    const g = new Game();
+    const texts = layout(g.snapshot()).filter((r) => r.text !== undefined);
+    expect(texts.map((t) => t.text)).toContain('PRESS ENTER TO START');
+  });
+
+  it('playing state: no ready overlay', () => {
+    const g = new Game(); g.start();
+    const texts = layout(g.snapshot()).filter((r) => r.text !== undefined);
+    expect(texts.map((t) => t.text)).not.toContain('PRESS ENTER TO START');
+  });
+
   it('hud texts present', () => {
     const g = new Game(); g.start();
     const texts = layout(g.snapshot()).filter((r) => r.text !== undefined);

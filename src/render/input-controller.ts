@@ -1,10 +1,10 @@
 import { Held, Actions } from '../core/types';
 
-export interface ActionsWithPause extends Actions { pause: boolean }
+export interface ActionsWithPause extends Actions { pause: boolean; start: boolean }
 
 export class InputController {
   private state: Held = { left: false, right: false, down: false, actions: { rotCW: false, rotCCW: false, hard: false, hold: false } };
-  private pending: ActionsWithPause = { rotCW: false, rotCCW: false, hard: false, hold: false, pause: false };
+  private pending: ActionsWithPause = { rotCW: false, rotCCW: false, hard: false, hold: false, pause: false, start: false };
   private onKeyDown = (e: KeyboardEvent) => { this.handle(e, true); };
   private onKeyUp = (e: KeyboardEvent) => { this.handle(e, false); };
 
@@ -23,6 +23,7 @@ export class InputController {
       case 'Space': if (down && !e.repeat) this.pending.hard = true; e.preventDefault(); break;
       case 'KeyC': case 'ShiftLeft': case 'ShiftRight': if (down && !e.repeat) this.pending.hold = true; break;
       case 'KeyP': case 'Escape': if (down && !e.repeat) this.pending.pause = true; break;
+      case 'Enter': if (down && !e.repeat) this.pending.start = true; e.preventDefault(); break;
     }
   }
 
@@ -30,7 +31,7 @@ export class InputController {
 
   drainActions(): ActionsWithPause {
     const out = this.pending;
-    this.pending = { rotCW: false, rotCCW: false, hard: false, hold: false, pause: false };
+    this.pending = { rotCW: false, rotCCW: false, hard: false, hold: false, pause: false, start: false };
     return out;
   }
 

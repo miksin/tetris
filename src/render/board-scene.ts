@@ -65,6 +65,7 @@ export function layout(snap: Snapshot): DrawItem[] {
   });
 
   // overlays
+  if (snap.state === 'ready') items.push({ x: BOARD_X, y: BOARD_Y + 280, w: COLS * CELL, h: 80, color: 0xffffff, solid: true, text: 'PRESS ENTER TO START' });
   if (snap.state === 'paused') items.push({ x: BOARD_X, y: BOARD_Y + 280, w: COLS * CELL, h: 80, color: 0xffffff, solid: true, text: 'PAUSED' });
   if (snap.state === 'gameover') items.push({ x: BOARD_X, y: BOARD_Y + 280, w: COLS * CELL, h: 80, color: 0xffffff, solid: true, text: 'GAME OVER — press any key' });
 
@@ -90,6 +91,11 @@ export class BoardScene extends Phaser.Scene {
   update(_time: number, delta: number): void {
     const held = this.controller.held();
     const actions = this.controller.drainActions();
+    if (this.core.snapshot().state === 'ready' && (actions.start || actions.hard)) {
+      actions.start = false;
+      actions.hard = false;
+      this.core.start();
+    }
     if (actions.pause) {
       if (this.core.snapshot().state === 'gameover') this.core.start();
       else this.core.pauseToggle();
